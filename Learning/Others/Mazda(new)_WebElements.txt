@@ -1,0 +1,340 @@
+//1.YOUR VEHICLE page URL - http://sys2.mazdaextended.agauk/(S(0ckuxbiwqhzmlxjyexrq4dht))/
+
+@FindBy(how=How.XPATH,using="//*[@id="RegistrationNumber"]")
+public WebElement registrationNumber;
+
+/*Error occurs if Vehicle registration field is left empty
+Error Msg - Please enter your vehicle registration number.*/
+@FindBy(how=How.XPATH,using="//*[@id="RegistrationNumber-error"]")
+public WebElement registrationNumberErr;
+
+/*Error occurs if invalid VRN is entered in Vehicle registration field.
+Error Type - Popup
+Error Msg - Sorry we are unable to offer you a warranty online*/
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div")
+public WebElement registrationNumberPopupErr;
+
+//This is close button Xpath for VRN pop-up Error
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div/div/button")
+public WebElement vrnPopupErrClosebtn;
+       
+@FindBy(how=How.XPATH,using="//*[@id="VehicleMileage"]")
+public WebElement vehicleMileage;
+
+/*Error occurs if Vehicle Mileage field is left empty.
+Error Msg- Please enter your exact vehicle mileage.*/
+@FindBy(how=How.XPATH,using="//*[@id="VehicleMileage-error"]")
+public WebElement vehicleMileageErr;
+
+/*Error occurs if entered mileage is lesser than current mileage.
+The mileage you have provided is less than the last recorded mileage for this vehicle. 
+Please check and re-enter. If the mileage you have entered is correct, please call us on 0800 777 182 and we will be happy to help you.*/
+@FindBy(how=How.XPATH,using="//*[@id="VehicleMileage-error"]")
+public WebElement vehicleMileageValErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="button_vehicle_search"]")
+public WebElement findMyVehicleBtn;
+       
+@FindBy(how=How.XPATH,using="//*[@id="LoginName"]")
+public WebElement loginName;
+       
+@FindBy(how=How.XPATH,using="//*[@id="Pin"]")
+public WebElement pin;
+
+@FindBy(how=How.XPATH,using="//*[@id="showPinBtn"]")
+public WebElement showPinBtn;
+
+/*Error occurs if Pin or/and Username field is empty, if invalid Pin or/and Username is given
+Error type - Popup
+Error Msg - Please enter a valid login.*/
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div")
+public WebElement pinUsrPopupErr;
+
+//This is close button Xpath for Pin and Username pop-up Error
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div/div/button")
+public WebElement pinUsrPopupErrClosebtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="login_Button"]")
+public WebElement loginBtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="GetQuote_Button"]")
+public WebElement getQuoteBtn;
+
+//2.Product Selector page URL - http://sys2.mazdaextended.agauk/(S(0ckuxbiwqhzmlxjyexrq4dht))/ProductsSelector
+
+@FindBy(how=How.XPATH,using="//*[@id="e8926c54-b37f-479e-a90b-0f051ba5a1b7"]/div[2]/div")
+public WebElement prdExtWarRdAssChkBox;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[1]/div/div[4]/div[2]/div[1]/div")
+public WebElement extWarRdAssAnn;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[1]/div/div[4]/div[2]/div[2]/div")
+public WebElement extWarRdAssMon;
+
+@FindBy(how=How.XPATH,using="//*[@id="b582b621-b869-4a8c-8678-7b4c986f7cbe"]/div[2]/div")
+public WebElement prdExtWarChkBox;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[1]/div/div[4]/div[2]/div[3]/div")
+public WebElement extWarAnn;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[1]/div/div[4]/div[2]/div[4]/div")
+public WebElement extWarMon;
+
+@FindBy(how=How.XPATH,using="//*[@id="067f7ba5-e0b1-4691-bbac-b66e95f3376b"]/div[2]/div")
+public WebElement prdRdAssChkBox;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[1]/div/div[4]/div[2]/div[5]/div")
+public WebElement rdAssAnnPay;
+
+/*Error occurs when policy payment option is not checked
+Error Msg - Please select one payment option*/
+@FindBy(how=How.XPATH,using="//*[@id="valpay"]")
+public WebElement polPayOptErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="overlayconf"]")
+public WebElement breakDwnConfChkBx;
+
+/*Error occurs if 'Vehicle is currently not in breakdown' check box is not selected
+Error Msg - Unfortunately you can only continue if you are not currently in need of roadside assistance.*/
+@FindBy(how=How.XPATH,using="//*[@id="valcheck"]")
+public WebElement breakDwnConfChkBxErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="confirmModalButton"]")
+public WebElement continueBtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="Back_Button"]")
+public WebElement bckToVehDetailsPage;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[2]/div/div/a[1]")
+public WebElement policyDocDwnloadBtn;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div[2]/div/div/a[2]")
+public WebElement ipidDocDwnloadBtn;
+
+/*After Clicking on 'Continue' button on Product Selection page.Product Confirmation window will appear as a pop-up. Options available on the pop-up - Yes/No
+If Yes is selected proceeds to ContactDetails page, Error will pop-up if No is selected*/
+@FindBy(how=How.XPATH,using="//*[@id="confirmProductSelectionButton"]")
+public WebElement confirmProductSelectionButton;
+
+@FindBy(how=How.XPATH,using="//*[@id="denyProductSelectionButton"]")
+public WebElement denyProductSelectionButton;
+
+/*Error occurs if No is selected in Product Confirmation pop-up
+Error type - Pop-up
+Error msg - Sorry we are unable to offer you a warranty online*/
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div")
+public WebElement denyPrdSelectionPopupErr;
+
+//This is close button Xpath for Deny Product Selection pop-up Error
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div/div/button")
+public WebElement denyPrdSelectionErrCloseBtn;
+
+//3.Contact Details page URL - http://sys2.mazdaextended.agauk/(S(0ckuxbiwqhzmlxjyexrq4dht))/Details
+
+@FindBy(how=How.XPATH,using="//*[@id="TitleContainer"]/label[1]")
+public WebElement customerTitle_Mr;
+
+@FindBy(how=How.XPATH,using="//*[@id="TitleContainer"]/label[2]")
+public WebElement customerTitle_Mrs;
+
+@FindBy(how=How.XPATH,using="//*[@id="TitleContainer"]/label[3]")
+public WebElement customerTitle_Miss;
+
+@FindBy(how=How.XPATH,using="//*[@id="TitleContainer"]/label[4]")
+public WebElement customerTitle_Ms;
+
+@FindBy(how=How.XPATH,using="//*[@id="TitleContainer"]/label[5]")
+public WebElement customerTitle_Dr;
+
+//Customer initail field is pre-filled and read only
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_Initials"]")
+public WebElement customerInitial;
+
+//Customer Last Name field is pre-filled and read only
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_LastName"]")
+public WebElement customerLastName;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_PostCode"]")
+public WebElement customerPostCode;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_FindAddress_Button"]")
+public WebElement findAddressBtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_DropdownSelect"]")
+public WebElement addressDrpDwnBtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_Company"]")
+public WebElement customerCompany;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_AddressLine1"]")
+public WebElement customerAddressLine1;
+
+/* Error occurs if Address Line 1 is left empty
+Error Msg - Please enter your address line 1 */
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_AddressLine1-error"]")
+public WebElement customerAddressLine1Err;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_AddressLine2"]")
+public WebElement customerAddressLine2;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_Town"]")
+public WebElement customerTown;
+
+/* Error occurs if City field is left empty
+Error Msg - Please enter your town */
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_Town-error"]")
+public WebElement customerTownErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="AddressViewModel_County"]")
+public WebElement customerCounty;
+
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_PreferredContactNumber"]")
+public WebElement customerContactNumber;
+
+/* Error occurs is Contact Number field is left empty.
+Error Msg - Please enter your preferred contact number*/
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_PreferredContactNumber-error"]")
+public WebElement customerContactNumberErr;
+
+/* Error occurs if invalid or non UK contact number is given
+Error Msg - Must be valid UK number*/
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_PreferredContactNumber-error"]")
+public WebElement customerContactNumberValErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_Email"]")
+public WebElement customerEmail;
+
+/* Error occurs is Customer Email field is left empty.
+Error Msg - Please enter your email*/
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_Email-error"]")
+public WebElement customerEmailErr;
+
+/* Error occurs if invalid Customer Email is given.
+Error Msg - Please enter a valid email*/
+@FindBy(how=How.XPATH,using="//*[@id="CustomerViewModel_Email-error"]")
+public WebElement customerEmailValErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="dropdownbutton"]")
+public WebElement contactDetailsUsageDrpDwnBtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="Continue_Button"]")
+public WebElement continueBtn2;
+
+@FindBy(how=How.XPATH,using="//*[@id="Back_Button"]")
+public WebElement bckToPrdSelectionPage;
+
+//4.Payment Details Page URL - http://sys2.mazdaextended.agauk/(S(0ckuxbiwqhzmlxjyexrq4dht))/Payment
+
+@FindBy(how=How.XPATH,using="//*[@id="CardType"]")
+public WebElement cardType;
+
+/* Error occurs if Card Type is not selected
+Error Msg - Card Type is required */
+@FindBy(how=How.XPATH,using="//*[@id="CardType-error"]")
+public WebElement cardTypeErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="CardNumber"]")
+public WebElement cardNumber;
+
+/* Error occurs if Card Number field is left empty
+Error Msg - Card Number is required */
+@FindBy(how=How.XPATH,using="//*[@id="CardNumber-error"]")
+public WebElement cardNumberErr;
+
+/* Error occurs if invalid Card Number is given
+Error Msg - Must be a valid card number */
+@FindBy(how=How.XPATH,using="//*[@id="CardNumber-error"]")
+public WebElement cardNumberValErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="expirydate"]")
+public WebElement cardExpMon;
+
+/* Error occurs if Expiry Month is 0 or greater than 12
+Error Msg - Must be a number between 1 and 12 */
+@FindBy(how=How.XPATH,using="//*[@id="expirydate-error"]")
+public WebElement cardExpMonValErr;
+
+/* Error occurs if Expiry Month field is left empty
+Error Msg - Expiry Month is required */
+@FindBy(how=How.XPATH,using="//*[@id="expirydate-error"]")
+public WebElement cardExpMonErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="ExpiryYear"]")
+public WebElement cardExpYr;
+
+/* Error occurs if Expiry Year field is left empty
+Error Msg - Expiry Year is required */
+@FindBy(how=How.XPATH,using="//*[@id="ExpiryYear-error"]")
+public WebElement cardExpYrErr;
+
+/* Error occurs if Expiry Year is lesser than Current Year
+Error Msg - Date must be in the future. */
+@FindBy(how=How.XPATH,using="//*[@id="futureValidator"]")
+public WebElement cardExpYrValErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="SecurityCode"]")
+public WebElement secCode;
+
+/* Error occurs if Security Code field is left empty
+Error Msg - Security Code is required */
+@FindBy(how=How.XPATH,using="//*[@id="SecurityCode-error"]")
+public WebElement secCodeErr;
+
+/* Error occurs if invalid Security Code is entered
+Error Msg - Must be a valid cvc code. */
+@FindBy(how=How.XPATH,using="//*[@id="SecurityCode-error"]")
+public WebElement secCodeValErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="NameOnCard"]")
+public WebElement cardHolderName;
+
+/* Error occurs if Card Holder Name field is left empty
+Error Msg - Cardholder Name is required */
+@FindBy(how=How.XPATH,using="//*[@id="NameOnCard-error"]")
+public WebElement cardHolderNameErr;
+
+@FindBy(how=How.XPATH,using="//*[@id="overlayconf2"]")
+public WebElement declarationChkBox;
+
+@FindBy(how=How.XPATH,using="//*[@id="overlayconf3"]")
+public WebElement polDocChkBox;
+
+@FindBy(how=How.XPATH,using="//*[@id="overlayconf4"]")
+public WebElement ipidDocChkBox;
+
+@FindBy(how=How.XPATH,using="//*[@id="Continue_Button"]")
+public WebElement submitBtn;
+
+@FindBy(how=How.XPATH,using="//*[@id="Back_Button"]")
+public WebElement bckToContactDetailspage;
+
+@FindBy(how=How.XPATH,using="/html/body/main/form/div[5]/div/div/div[3]/div/div/a[1]") 
+public WebElement policyDocDwnloadBtn1;
+
+@FindBy(how=How.XPATH,using="html/body/main/form/div[5]/div/div/div[3]/div/div/a[2]") 
+public WebElement ipidDocDwnloadBtn1;
+
+5. Transaction Successfull Page URL - http://sys2.mazdaextended.agauk/(S(0ckuxbiwqhzmlxjyexrq4dht))/Payment/Action
+
+//Pop-up Msg - Transaction Successfull
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div")
+public WebElement transPassPopUp;
+
+@FindBy(how=How.XPATH,using="//*[@id="errorModal"]/div/div/div/button")
+public WebElement transPassPopUpCloseBtn;
+
+
+mazdaWebElements.transPassPopUpCloseBtn.Click;
+mazdaWebElements.cardHolderName.clear();  
+mazdaWebElements.cardHolderName.sendKeys("HCLUser");
+mazdaWebElements..registrationNumberErr.getText();
+
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.switchTo().frame(frameElement);
+        driver.switchTo().defaultContent();
+        driver.close();
+        driver.quit();
+
+
+
